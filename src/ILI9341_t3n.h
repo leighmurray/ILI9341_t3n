@@ -4,7 +4,7 @@
 //
 // Warning this is Kurt's updated version which allows it to work on different SPI busses.
 //
-// On Teensy 3.x allows you to use on only one valid hardware CS pin  which must 
+// On Teensy 3.x allows you to use on only one valid hardware CS pin  which must
 // be used for DC
 //
 // On Teensy 4.x including Micromod you are free to use any digital pin for
@@ -105,8 +105,8 @@
 
 #include "ILI9341_fonts.h"
 
-#define ILI9341_TFTWIDTH 240
-#define ILI9341_TFTHEIGHT 320
+#define ILI9341_TFTWIDTH 320
+#define ILI9341_TFTHEIGHT 480
 
 #define ILI9341_NOP 0x00
 #define ILI9341_SWRESET 0x01
@@ -322,11 +322,11 @@ public:
   void writeRect(int16_t x, int16_t y, int16_t w, int16_t h,
                  const uint16_t *pcolors);
 
-  void writeSubImageRect(int16_t x, int16_t y, int16_t w, int16_t h, 
-                        int16_t image_offset_x, int16_t image_offset_y, int16_t image_width, int16_t image_height, 
+  void writeSubImageRect(int16_t x, int16_t y, int16_t w, int16_t h,
+                        int16_t image_offset_x, int16_t image_offset_y, int16_t image_width, int16_t image_height,
                         const uint16_t *pcolors);
-  void writeSubImageRectBytesReversed(int16_t x, int16_t y, int16_t w, int16_t h, 
-                        int16_t image_offset_x, int16_t image_offset_y, int16_t image_width, int16_t image_height, 
+  void writeSubImageRectBytesReversed(int16_t x, int16_t y, int16_t w, int16_t h,
+                        int16_t image_offset_x, int16_t image_offset_y, int16_t image_width, int16_t image_height,
                         const uint16_t *pcolors);
   // writeRect8BPP - 	write 8 bit per pixel paletted bitmap
   //					bitmap data in array at pixels, one byte per
